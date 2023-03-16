@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudVideoAutoConverter", "CloudVideoAutoConverter\CloudVideoAutoConverter.csproj", "{6ADE0056-1B91-401A-8872-CDFF4E43BE40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorrSaver", "TorrSaver\TorrSaver.csproj", "{34276E94-2F7E-408A-A7A5-871FD5E9A0EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{6ADE0056-1B91-401A-8872-CDFF4E43BE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ADE0056-1B91-401A-8872-CDFF4E43BE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ADE0056-1B91-401A-8872-CDFF4E43BE40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34276E94-2F7E-408A-A7A5-871FD5E9A0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34276E94-2F7E-408A-A7A5-871FD5E9A0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34276E94-2F7E-408A-A7A5-871FD5E9A0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34276E94-2F7E-408A-A7A5-871FD5E9A0EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
