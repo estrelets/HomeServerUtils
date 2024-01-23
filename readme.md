@@ -70,6 +70,6 @@ docker compose up
 sudo crontab -e
 
 #to end of file:
-*/15 * * * * docker compose -f /home/estr/HomeServerUtils/docker-compose.yaml run rclone sync -v yandex:Фотокамера/Ника /mount/media/photos
-0 * * * * docker compose -f /home/estr/HomeServerUtils/docker-compose.yaml exec photoprism photoprism index --cleanup
+*/15 * * * * /home/estr/HomeServerUtils/cron/cloud.sh
+0 * * * * /home/estr/HomeServerUtils/cron/photo.sh
 ```
