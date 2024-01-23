@@ -365,6 +365,7 @@ MigrationBackup/
 **/.idea/**/dataSources.local.xml
 **/.idea/**/sqlDataSources.xml
 **/.idea/**/dynamic.xml
+**/.idea/**/
 
 # Rider
 # Rider auto-generates .iml files, and contentModel.xml
@@ -383,3 +384,4 @@ _UpgradeReport_Files/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
