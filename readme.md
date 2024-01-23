@@ -59,8 +59,8 @@ sudo systemctl enable --now smbd
 ## Docker compose
 
 ```bash
-
-
+cp example.env .env
+docker compose up
 ```
 
 
@@ -70,6 +70,6 @@ sudo systemctl enable --now smbd
 sudo crontab -e
 
 #to end of file:
-*/15 * * * * docker compose -f /home/estr/tmp/docker-compose.yaml run rclone sync -v yandex:Фотокамера/Ника /mount/photos
-0 * * * * docker compose -f /home/estr/tmp/docker-compose.yaml exec photoprism photoprism index --cleanup
+*/15 * * * * docker compose -f /home/estr/HomeServerUtils/docker-compose.yaml run rclone sync -v yandex:Фотокамера/Ника /mount/media/photos
+0 * * * * docker compose -f /home/estr/HomeServerUtils/docker-compose.yaml exec photoprism photoprism index --cleanup
 ```
