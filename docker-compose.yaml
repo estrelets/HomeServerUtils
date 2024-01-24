@@ -104,12 +104,11 @@ services:
       PHOTOPRISM_SITE_CAPTION: "AI-Powered Photos App"
       PHOTOPRISM_SITE_DESCRIPTION: ""                # meta site description
       PHOTOPRISM_SITE_AUTHOR: ""                     # meta site author
+      PHOTOPRISM_FFMPEG_ENCODER: "intel"        # H.264/AVC encoder (software, intel, nvidia, apple, raspberry, or vaapi)
+      PHOTOPRISM_INIT: "intel tensorflow"
     ## Video Transcoding (https://docs.photoprism.app/getting-started/advanced/transcoding/):
-    # PHOTOPRISM_FFMPEG_ENCODER: "software"        # H.264/AVC encoder (software, intel, nvidia, apple, raspberry, or vaapi)
     # PHOTOPRISM_FFMPEG_SIZE: "1920"               # video size limit in pixels (720-7680) (default: 3840)
     # PHOTOPRISM_FFMPEG_BITRATE: "32"              # video bitrate limit in Mbit/s (default: 50)
-    ## Run/install on first startup (options: update https gpu tensorflow davfs clitools clean):
-    # PHOTOPRISM_INIT: "https gpu tensorflow"
     ## Run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1200):
     # PHOTOPRISM_UID: 1000
     # PHOTOPRISM_GID: 1000
@@ -117,8 +116,8 @@ services:
     ## Start as non-root user before initialization (supported: 0, 33, 50-99, 500-600, and 900-1200):
     # user: "1000:1000"
     ## Share hardware devices with FFmpeg and TensorFlow (optional):
-    # devices:
-    #  - "/dev/dri:/dev/dri"                         # Intel QSV
+    devices:
+      - "/dev/dri:/dev/dri"                         # Intel QSV
     #  - "/dev/nvidia0:/dev/nvidia0"                 # Nvidia CUDA
     #  - "/dev/nvidiactl:/dev/nvidiactl"
     #  - "/dev/nvidia-modeset:/dev/nvidia-modeset"
