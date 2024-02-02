@@ -129,3 +129,15 @@ services:
     volumes:
       - ${MEDIA_DIRECTORY}/photos:/photoprism/originals
       - ${CONFIG_DIRECTORY}/prism:/photoprism/storage                  # *Writable* storage folder for cache, database, and sidecar files (DO NOT REMOVE)
+  
+  converter:
+    build:
+      context: ./src/HSU/
+      dockerfile: ./Converter/Dockerfile
+    environment:
+      - INPUT_DIRECTORY=/src/
+      - OUTPUT_DIRECTORY=/dst/
+      - FFMPEG_ARGS=-i "{0}" -c:v libx264 -tune zerolatency -preset fast -acodec aac "{1}"
+    volumes:
+      - ${MEDIA_DIRECTORY}/photos:/src/
+      - ${MEDIA_DIRECTORY}/photos_converted:/dst/
