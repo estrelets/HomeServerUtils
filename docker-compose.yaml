@@ -141,3 +141,16 @@ services:
     volumes:
       - ${MEDIA_DIRECTORY}/photos:/src/
       - ${MEDIA_DIRECTORY}/photos_converted:/dst/
+  
+  plex:
+    container_name: plex
+    image: plexinc/pms-docker
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Barnaul
+      - PLEX_CLAIM=claim-NZJDMzNzDvVvrMF7zUPc
+    network_mode: host
+    volumes:
+      - ${CONFIG_DIRECTORY}/plex/db:/config
+      - ${CONFIG_DIRECTORY}/plex/temp:/transcode
+      - ${MEDIA_DIRECTORY}:/data
