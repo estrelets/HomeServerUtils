@@ -67,9 +67,10 @@ docker compose up
 ## Crontab
 
 ```
+cd /home/estr/HomeServerUtils/cron/
+chmod +x sync.sh
 sudo crontab -e
 
 #to end of file:
-*/15 * * * * /home/estr/HomeServerUtils/cron/cloud.sh
-0 * * * * /home/estr/HomeServerUtils/cron/photo.sh
+*/15 * * * * /home/estr/HomeServerUtils/cron/sync.sh
 ```

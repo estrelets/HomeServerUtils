@@ -127,7 +127,7 @@ services:
     #  - "/dev/video11:/dev/video11"                 # Video4Linux Video Encode Device (h264_v4l2m2m)
     working_dir: "/photoprism" # do not change or remove
     volumes:
-      - ${MEDIA_DIRECTORY}/photos:/photoprism/originals
+      - ${MEDIA_DIRECTORY}/photos_converted:/photoprism/originals
       - ${CONFIG_DIRECTORY}/prism:/photoprism/storage                  # *Writable* storage folder for cache, database, and sidecar files (DO NOT REMOVE)
   
   converter:
